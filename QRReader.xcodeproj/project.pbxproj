@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		209A27CC1ADC5291009E1DD7 /* testQr.png in Resources */ = {isa = PBXBuildFile; fileRef = 209A27CB1ADC5291009E1DD7 /* testQr.png */; };
 		209B2A1A1ADC381D00E10EBF /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 209B2A191ADC381D00E10EBF /* main.m */; };
 		209B2A1D1ADC381D00E10EBF /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 209B2A1C1ADC381D00E10EBF /* AppDelegate.m */; };
 		209B2A201ADC381D00E10EBF /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 209B2A1F1ADC381D00E10EBF /* ViewController.m */; };
@@ -27,6 +28,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		209A27CB1ADC5291009E1DD7 /* testQr.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = testQr.png; path = ../../Desktop/testQr.png; sourceTree = "<group>"; };
 		209B2A141ADC381D00E10EBF /* QRReader.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = QRReader.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		209B2A181ADC381D00E10EBF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		209B2A191ADC381D00E10EBF /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -63,6 +65,7 @@
 		209B2A0B1ADC381D00E10EBF = {
 			isa = PBXGroup;
 			children = (
+				209A27CB1ADC5291009E1DD7 /* testQr.png */,
 				209B2A161ADC381D00E10EBF /* QRReader */,
 				209B2A301ADC381E00E10EBF /* QRReaderTests */,
 				209B2A151ADC381D00E10EBF /* Products */,
@@ -168,6 +171,7 @@
 				TargetAttributes = {
 					209B2A131ADC381D00E10EBF = {
 						CreatedOnToolsVersion = 6.3;
+						DevelopmentTeam = 8F9DS3KNKA;
 					};
 					209B2A2C1ADC381E00E10EBF = {
 						CreatedOnToolsVersion = 6.3;
@@ -199,6 +203,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				209A27CC1ADC5291009E1DD7 /* testQr.png in Resources */,
 				209B2A231ADC381D00E10EBF /* Main.storyboard in Resources */,
 				209B2A281ADC381E00E10EBF /* LaunchScreen.xib in Resources */,
 				209B2A251ADC381E00E10EBF /* Images.xcassets in Resources */,
@@ -349,9 +354,14 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = QRReader/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
+				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
 		};
@@ -359,9 +369,14 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = QRReader/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
+				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
 		};
@@ -418,6 +433,7 @@
 				209B2A391ADC381E00E10EBF /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		209B2A3A1ADC381E00E10EBF /* Build configuration list for PBXNativeTarget "QRReaderTests" */ = {
 			isa = XCConfigurationList;
@@ -426,6 +442,7 @@
 				209B2A3C1ADC381E00E10EBF /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

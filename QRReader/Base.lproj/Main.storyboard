@@ -1,13 +1,15 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6211" systemVersion="14A298i" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7531" systemVersion="14D131" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6204"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7520"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -15,11 +17,65 @@
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="center" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="TLA-US-cGG">
+                                <rect key="frame" x="16" y="20" width="568" height="475"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ixT-2R-K5D">
+                                        <rect key="frame" x="0.0" y="0.0" width="568" height="475"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="568" id="rX2-CT-6vT"/>
+                                        </constraints>
+                                        <state key="normal" title="Tap to read a QR Code">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <variation key="default">
+                                            <mask key="constraints">
+                                                <exclude reference="rX2-CT-6vT"/>
+                                            </mask>
+                                        </variation>
+                                        <connections>
+                                            <action selector="startStopReading:" destination="BYZ-38-t0r" eventType="touchDown" id="U87-MN-Z9I"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                <rect key="contentStretch" x="1" y="0.0" width="1" height="1"/>
+                                <constraints>
+                                    <constraint firstAttribute="centerX" secondItem="ixT-2R-K5D" secondAttribute="centerX" id="FUU-EX-AHX"/>
+                                    <constraint firstItem="ixT-2R-K5D" firstAttribute="leading" secondItem="TLA-US-cGG" secondAttribute="leading" id="ksG-fV-Wli"/>
+                                    <constraint firstAttribute="bottom" secondItem="ixT-2R-K5D" secondAttribute="bottom" id="q4T-Il-Y8i"/>
+                                    <constraint firstItem="ixT-2R-K5D" firstAttribute="top" secondItem="TLA-US-cGG" secondAttribute="top" id="umx-K2-Ceb"/>
+                                    <constraint firstAttribute="centerY" secondItem="ixT-2R-K5D" secondAttribute="centerY" id="z3K-Qu-Pwp"/>
+                                </constraints>
+                            </view>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="QR Code Reader is not yet running…" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7Yt-e9-ymN">
+                                <rect key="frame" x="157" y="540" width="286" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="7Yt-e9-ymN" secondAttribute="bottom" constant="39" id="E2c-gj-IL3"/>
+                            <constraint firstAttribute="centerX" secondItem="TLA-US-cGG" secondAttribute="centerX" id="JUn-7g-kM3"/>
+                            <constraint firstItem="TLA-US-cGG" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="QUv-Ge-xXA"/>
+                            <constraint firstAttribute="centerY" secondItem="TLA-US-cGG" secondAttribute="centerY" constant="42.5" id="gzV-CA-vLA"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="TLA-US-cGG" secondAttribute="bottom" constant="105" id="iRs-fI-sLg"/>
+                            <constraint firstAttribute="centerX" secondItem="7Yt-e9-ymN" secondAttribute="centerX" id="n6H-W5-mjH"/>
+                            <constraint firstItem="TLA-US-cGG" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="zou-WD-mqE"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="qrStatus" destination="7Yt-e9-ymN" id="pW4-7c-hme"/>
+                        <outlet property="viewPreview" destination="TLA-US-cGG" id="Iep-jz-PU8"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="438.99999999999994" y="361"/>
         </scene>
     </scenes>
 </document>
